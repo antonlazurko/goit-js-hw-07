@@ -1,14 +1,14 @@
-const inputText6 = document.querySelector('#validation-input');
-inputText6.addEventListener('blur', checkValidInputLength);
+const inputText = document.querySelector('#validation-input');
+inputText.addEventListener('blur', checkValidInputLength);
 function checkValidInputLength(event) {
   if (
     event.currentTarget.value.length ===
-    Number(inputText6.getAttribute('data-length'))
+    Number(inputText.getAttribute('data-length'))
   ) {
-    inputText6.classList.remove('invalid');
-    inputText6.classList.add('valid');
+    inputText.classList.remove('invalid');
+    inputText.classList.add('valid');
   } else {
-    inputText6.classList.remove('valid');
-    inputText6.classList.add('invalid');
+    inputText.classList.remove('valid');
+    inputText.classList.add('invalid');
   }
 }
